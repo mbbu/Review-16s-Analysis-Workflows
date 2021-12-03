@@ -12,4 +12,4 @@
 * Ruth Najala
 * Dr. Caleb Kibet
 ## Roadmap
-[Here](https://github.com/Nelly-Wambui/16S-rRNA_Miniproject/issues/1) is our roadmap for this project
+[Here](https://github.com/mbbu/Reviewing-16s-Analysis-Workflows/issues/1) is our roadmap for this project
