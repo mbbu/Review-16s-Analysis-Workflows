@@ -22,6 +22,7 @@ After testing them we concluded that the nf-core/ampliseq pipeline was the best 
 * It is important to note that the MBBU-16S_Accreditation-QIIME2 and MBBU-16S_Accreditation-DADA2 are in the same github repository.
 
 | Criteria | nf-core | H3ABionet-SOPs | H3aBionet-TADA | mbbu-16S_Accreditation-QIIME2 | mbbu-16S_Accreditation-DADA2 |
+| Sequences | 16S, 18S, ITS |	16S | 16S, ITS | 16S | 16S |
 | -------- | ------- | -------------- | -------------- | ----------------------------- | ---------------------------- |
 | Tools and Databases | [Tools](https://github.com/nf-core/ampliseq#pipeline-summary),[Databases](https://nf-co.re/ampliseq/parameters#taxonomic-database)| [Tools](https://github.com/h3abionet/H3ABionet-SOPs/blob/master/pages/genomics_analysis/16s-rRNA/16s-rRNA.md#tools-referred-to-in-sop-tools), [Databases](https://github.com/h3abionet/H3ABionet-SOPs/blob/master/pages/genomics_analysis/16s-rRNA/16s-rRNA.md#databases-referred-to-in-sop-databases) | Not well defined | [Tools](https://github.com/mbbu/16S_Accreditation/blob/main/Qiime2_report.md#qiime-nexflow-pipeline), [Databases](https://github.com/mbbu/16S_Accreditation/blob/main/Qiime2_Nextflow/modules/chimera.nf) | [Tools](https://github.com/mbbu/16S_Accreditation/blob/main/Dada2_report.md#set-up), [Databases](https://github.com/mbbu/16S_Accreditation/blob/main/Dada2_Pipeline/dada2_pipeline.R) |
 | QIIME2 | Yes | Yes | No | Yes | No | 
@@ -35,7 +36,6 @@ After testing them we concluded that the nf-core/ampliseq pipeline was the best 
 | Running on cloud | Yes [Results from AWS Cloud](https://nf-co.re/ampliseq/results#ampliseq/results-80b3cb8b05d3b596bd0a52866e7febe40ea497db/) | N/A (It is an SOP) | Yes [AWS configs](https://github.com/h3abionet/TADA/tree/master/conf) | N/A | N/A |
 | Languages | [Codes](https://github.com/nf-core/ampliseq/search?l=Groovy&type=code) | N/A (It is an SOP) | [Codes](https://github.com/h3abionet/TADA/search?l=nextflow) | [Codes](https://github.com/mbbu/16S_Accreditation/search?l=html) | [Codes](https://github.com/mbbu/16S_Accreditation/search?l=html) |
 | Issues | [366](https://github.com/nf-core/ampliseq/search?l=Groovy&type=issues) | N/A (It is an SOP) | [32](https://github.com/h3abionet/TADA/search?l=nextflow&type=issues) | [10](https://github.com/mbbu/16S_Accreditation/search?l=html&type=issues) | [10](https://github.com/mbbu/16S_Accreditation/search?l=html&type=issues) |
-| Sequences | 16S, 18S, ITS |	16S | 16S, ITS | 16S | 16S |
 | Last updated | October 2021 | February 2019 | September 2021 | April 2021 | April 2021 |
 
 ## H3ABionet-SOPs/16s-rRNA-1-0.html
