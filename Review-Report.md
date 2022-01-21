@@ -9,11 +9,11 @@ The gene is used in microbiome analysis. Analysis pipelines have been developed 
 - https://github.com/mbbu/16S_Accreditation
 - https://github.com/h3abionet/h3abionet16S
 
-After testing them we concluded that the nf-core/ampliseq pipeline was the best and we made changes to the MBBU 16S-Accreditation pipelines (Both Dada2 and Qiime2 pipelines). Those that were challenging to run were dropped early in the review.
+After testing them with a few different datasets, we concluded that the nf-core/ampliseq pipeline was the best and also made a few changes in the MBBU 16S-Accreditation pipelines (Both Dada2 and Qiime2 pipelines). Those that were challenging to run were dropped early in the review process.
 
 ## Pipelines' Functionality
 
-* Some of the points int the criteria will be shown in reference to this range: 
+* Some of the points in the criteria will be shown in reference to this range: 
   * 1 - Very good
   * 2 - Good
   * 3 - Fairly good
@@ -38,8 +38,9 @@ After testing them we concluded that the nf-core/ampliseq pipeline was the best 
 | Issues | [366](https://github.com/nf-core/ampliseq/search?l=Groovy&type=issues) | N/A (It is an SOP) | [32](https://github.com/h3abionet/TADA/search?l=nextflow&type=issues) | [10](https://github.com/mbbu/16S_Accreditation/search?l=html&type=issues) | [10](https://github.com/mbbu/16S_Accreditation/search?l=html&type=issues) |
 | Last updated | October 2021 | February 2019 | September 2021 | April 2021 | April 2021 |
 
-## H3ABionet-SOPs/16s-rRNA-1-0.html
-* In it are also questions on operation,run-time and output analysis that one would consider having as a criteria in reviewing workflows.
+## More information on individual pipelines
+### H3ABionet-SOPs/16s-rRNA-1-0.html
+* There are questions on operation,run-time and output analysis that one would consider having as criteria in reviewing workflows.
 * It would be a good SOP for an individual intending to create a QIIME pipeline from scratch.
 
 ## h3abionet/TADA
@@ -51,13 +52,12 @@ nextflow run uct-cbio/16S-rDNA-dada2-pipeline --reads '*_R{1,2}.fastq.gz' --trim
 * It outputs results mostly in RDS format.
 
 ## nf-core/ampliseq pipeline
-* It is a bioinformatics analysis pipeline used for amplicon sequencing, supporting denoising of any amplicon and, currently, taxonomic assignment of 16S, ITS and 18S amplicons. 
-* Supported is paired-end Illumina or single-end Illumina, PacBio and IonTorrent data. 
-* Default is the analysis of 16S rRNA gene amplicons sequenced paired-end with Illumina.
-* It runs with Conda, Docker, Podman,Shifter, Charliecloud and Singularity.
+* It supports paired-end Illumina or single-end Illumina, PacBio and IonTorrent data. 
+* Analysis of 16S rRNA gene amplicons sequenced paired-end with Illumina is the default analysis.
+* It runs with Conda, Docker, Podman,Shifter, Charliecloud or Singularity.
 * Command for running the pipeline:
   ```
-  nextflow run nf-core/ampliseq -profile <docker/singularity/podman/shifter/charliecloud/conda/institute> --input "path to data" --FW_primer "forward primer sequence" --RV_primer "reverse primer sequence" --metadata "Path to metadata file""
+  nextflow run nf-core/ampliseq -profile <docker/singularity/podman/shifter/charliecloud/conda/institute> --input "path/to/data" --FW_primer "forward-primer-sequence" --RV_primer "reverse-primer-sequence" --metadata "Path/to/metadata/file""
   ```
 
 ![Image of how it runs and output expected](https://github.com/nf-core/ampliseq/blob/master/docs/images/ampliseq_workflow.png)
