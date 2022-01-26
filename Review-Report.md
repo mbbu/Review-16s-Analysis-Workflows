@@ -2,14 +2,35 @@
 ## Introduction
 16S rRNA is a gene that encodes the RNA component of the small subunit(30S subunit) of ribosomes in bacteria and archaea. 16S is a sedimentation coefficient([Dependency Map of Proteins in the Small Ribosomal Subunit](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0020010)). This is an essential gene required for initiating protein synthesis and the stabilizing correct codon-anticodon pairing in the A site of the ribosome during mRNA translation([The distribution, diversity, and importance of 16S rRNA gene introns in the order Thermoproteales](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4496867/)). It is called "the molecular fossil" of bacteria because of being highly conserved and specific. This makes it the most widely used gene marker for genus and species identification, as well as taxonomic significance([16S/18S/ITS Amplicon Sequencing](https://www.cd-genomics.com/16S-18S-ITS-Amplicon-Sequencing.html)). The gene is about 1500bp and is composed of both conserved regions and variable regions. The conserved region is shared while the variable regions have differences among different bacteria and therefore providing information on the specificity of the genus and the species([16S rRNA, One of the Most Important rRNAs](https://www.cd-genomics.com/blog/16s-rrna-one-of-the-most-important-rrnas/)). 
 
-The gene is used in microbiome analysis. Analysis pipelines have been developed and improved over the years and include QIIME and DADA2 pipelines. Our internship project required us to review some of the existing pipelines and come up with a conclusion on the best among the following:
-- https://github.com/nf-core/ampliseq 
-- https://h3abionet.github.io/H3ABionet-SOPs/16s-rRNA-1-0.html
-- https://github.com/h3abionet/TADA
-- https://github.com/mbbu/16S_Accreditation
-- https://github.com/h3abionet/h3abionet16S
+The gene is used in microbiome analysis. Analysis pipelines have been developed and improved over the years and include QIIME and DADA2 pipelines. Our internship project required us to review some of the existing pipelines and come up with a conclusion on the best ones. After testing them with different datasets, we concluded that the nf-core/ampliseq pipeline was the best and also made a few changes in the MBBU 16S-Accreditation pipelines (Both Dada2 and Qiime2 pipelines). Those that were challenging to run were dropped early in the review process.
 
-After testing them with a few different datasets, we concluded that the nf-core/ampliseq pipeline was the best and also made a few changes in the MBBU 16S-Accreditation pipelines (Both Dada2 and Qiime2 pipelines). Those that were challenging to run were dropped early in the review process.
+## Objectives
+
+* To review existing microbiome workflows, identify great ones and extend the workflows where there are gaps, especially to make them useful in insect and pathogen data.
+
+## Methods
+
+1. Testing workflows
+* We tested the following pipelines according to the functionalities indicated in their documentations:
+  - https://github.com/nf-core/ampliseq 
+  - https://h3abionet.github.io/H3ABionet-SOPs/16s-rRNA-1-0.html
+  - https://github.com/h3abionet/TADA
+  - https://github.com/mbbu/16S_Accreditation
+  - https://github.com/h3abionet/h3abionet16S
+* We used different datasets in running the pieplines
+* It took about 6 weeks
+
+2. Identifying gaps
+* While running we identified gaps using the following criteria:
+  - How easy are they to set up and use? Do they provide accessible documentation and tutorials?
+  - Are they fast and easily scalable based on available compute resources?
+  - Can they scale to the cloud?
+  - Can they be used on a variety of data, including insects and pathogen microbiome
+  - Are they implemented in the latest specifications and versions of the tools? For example, Whether the pipeline implements Nextflow DSL2 syntax and docker or singularity containers
+  - Are they well and regularly maintained? When were they updated last?
+* We were also able to find gaps from the errors we came across
+
+3. Extending workflows
 
 ## Pipelines' Functionality
 
