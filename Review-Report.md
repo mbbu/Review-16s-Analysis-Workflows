@@ -21,7 +21,7 @@ The gene is used in microbiome analysis. Analysis pipelines have been developed 
 * It took about 6 weeks
 
 2. Identifying gaps
-* While running we identified gaps using the following criteria:
+* While testing the pipelines, we identified gaps using the following criteria:
   - How easy are they to set up and use? Do they provide accessible documentation and tutorials?
   - Are they fast and easily scalable based on available compute resources?
   - Can they scale to the cloud?
@@ -31,6 +31,8 @@ The gene is used in microbiome analysis. Analysis pipelines have been developed 
 * We were also able to find gaps from the errors we came across
 
 3. Extending workflows
+* We worked around the errors we got and extensively tested the final extended workflows using different sets of data
+* 
 
 ## Results
 * [The new MBBU/16S-Accreditation DADA2 pipeline](https://github.com/mbbu/Reviewing-16s-Analysis-Workflows/tree/main/New_MBBU_Dada2_pipeline)
