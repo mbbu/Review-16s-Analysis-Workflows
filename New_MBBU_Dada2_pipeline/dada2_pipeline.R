@@ -5,8 +5,13 @@ profvis({
 library(dada2)
 packageVersion("dada2") 
 
+#path variables
+data_path <- ()
+train_set_path <- ()
+assignment_path <- ()
+metadata_path <- ()
 #setwd("path to working directory")
-data <- "/node/cohort4/nelly/16s-rRNA-Project/data"  
+data <- data_path  
 
 list.files(data) #make sure what we think is here is actually here
 
@@ -167,9 +172,9 @@ write.table(summary_tab, "read-count-tracking.tsv", quote=FALSE, sep="\t", col.n
 #assigning taxonomy
 
 
-taxa <- assignTaxonomy(seqtab.nochim,"/data/asatsa/dada2_preprocess/dada2_amplicon_ex_workflow/refdb/silva_nr99_v138.1_train_set.fa",tryRC = TRUE)
+taxa <- assignTaxonomy(seqtab.nochim,train_set_path,tryRC = TRUE)
 
-taxa <- addSpecies(taxa, "/data/asatsa/dada2_preprocess/dada2_amplicon_ex_workflow/refdb/silva_species_assignment_v138.1.fa.gz",tryRC = TRUE)
+taxa <- addSpecies(taxa, assignment_path,tryRC = TRUE)
 
 write.table(taxa, "taxa_silva_taxonomy.tsv", sep = "\t", quote=F, col.names=NA) 
 
@@ -240,7 +245,7 @@ library(phyloseq)
 
 library('phyloseq')
 #NB: Provide a path to the set5_meta.txt file and ensure your file has the sample column labelled sample if not add the label. 
-samdata <- read.table("/node/cohort4/nelly/16s-rRNA-Project/metadt.tsv", header = TRUE, sep="\t", row.names = samples_F)
+samdata <- read.table(metadata_path, header = TRUE, sep="\t", row.names = samples_F)
 samples_F
 samdata
 phyloseq_object <- phyloseq(otu_table(seqtab.nochim,taxa_are_rows=FALSE),sample_data(samdata),tax_table(taxa),phy_tree(fitGTR$tree))
