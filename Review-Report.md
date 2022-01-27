@@ -17,8 +17,8 @@ The gene is used in microbiome analysis. Analysis pipelines have been developed 
   - https://github.com/h3abionet/TADA
   - https://github.com/mbbu/16S_Accreditation
   - https://github.com/h3abionet/h3abionet16S
+  - Yosef's DADA2 pipeline
 * We used different datasets in running the pieplines
-* It took about 6 weeks
 
 2. Identifying gaps
 * While testing the pipelines, we identified gaps using the following criteria:
@@ -32,11 +32,30 @@ The gene is used in microbiome analysis. Analysis pipelines have been developed 
 
 3. Extending workflows
 * We worked around the errors we got and extensively tested the final extended workflows using different sets of data
-* 
 
 ## Results
 * [The new MBBU/16S-Accreditation DADA2 pipeline](https://github.com/mbbu/Reviewing-16s-Analysis-Workflows/tree/main/New_MBBU_Dada2_pipeline)
-*  
+
+## Summary of work done
+| WEEK | ACTIVITY |
+|----- | -------- |
+| WEEK 1 | Obtaining test datasets 
+|        | Assessing workflow performance 
+| WEEK 2 | Running and troubleshooting MBBU/16S-Accreditation, H3ABioNet-SOPs, H3ABioNet-TADA, H3ABioNet-16S, nf-core/ampliseq
+| WEEK 3 | Testing the nf-core/ ampliseq using stingless-bee data
+|        | Running Yosef's DADA2 pipeline and MBBU/16S-Accreditation DADA2 pipeline
+| WEEK 4 | Obtaining more test data
+|        | Testing of the nf-core pipeline using different datasets(ITS data and 18S data)
+|        | Solving week 3 errors and running Yosef's DADA2 pipeline, MBBU/16S-Accreditation DADA2 pipeline
+| WEEK 5 | Solving Week 4 errors and running Yosef's DADA2 pipeline, MBBU/16S-Accreditation DADA2 pipeline
+|        | Testing of the MBBU/16S-Accreditation DADA2 pipeline using different datasets(stingless bee, dog, and nf-core/ampliseq data)
+|        | Testing of the nf-core pipeline using different datasets(ITS, PacBio, 18S, stingless bee microbiome,and IonTorrent data)
+|        | Creating a test dataset, a test config and including flags for MBBU/16S-Accreditation QIIME2 pipeline
+|        | Making a new documentation for MBBU/16S-Accreditation
+| WEEK 6 | Running Yosef's pipeline
+|        | Viewing nf-core/ampliseq functional analysis results using STAMP
+| WEEK 7 | Report writing
+
 
 ## Pipelines' Functionality
 
@@ -145,3 +164,18 @@ This workflow comparison is only for the pipelines that we tested and found to b
   
     
 </table>
+
+## Challenges
+### Time
+We had many holidays and a December break that in turn lessened the time to work on our objectives
+
+### Internet
+There was no internet for a period of time and could not progress with our work and had to change location of work
+
+### Server space
+Some processes would not run because of having less space in the server
+
+## Recommendations
+We purposed to do the following but hope some
+* Nextflow automation of MBBU/16S-Accreditation DADA2 pipeline
+* Adding picrust to MBBU/16S-Accreditation DADA2 pipeline for functional analysis
