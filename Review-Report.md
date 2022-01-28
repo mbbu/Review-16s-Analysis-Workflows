@@ -57,7 +57,7 @@ The gene is used in microbiome analysis. Analysis pipelines have been developed 
 | WEEK 7 | Report writing
 
 
-## Pipelines' Functionality
+## Pipelines' Functionalities
 
 * Some of the points in the criteria will be shown in reference to this range: 
   * 1 - Very good
