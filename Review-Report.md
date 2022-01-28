@@ -35,6 +35,7 @@ The gene is used in microbiome analysis. Analysis pipelines have been developed 
 
 ## Results
 * [The new MBBU/16S-Accreditation DADA2 pipeline](https://github.com/mbbu/Reviewing-16s-Analysis-Workflows/tree/main/New_MBBU_Dada2_pipeline)
+* [Functional analysis using nf-core/ampliseq](https://github.com/mbbu/Reviewing-16s-Analysis-Workflows/tree/main/Nf-core%20visualization)
 
 ## Summary of work done
 | WEEK | ACTIVITY |
