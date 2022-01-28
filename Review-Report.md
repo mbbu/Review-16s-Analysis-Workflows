@@ -177,6 +177,6 @@ There was no internet for a period of time and could not progress with our work 
 Some processes would not run because of having less space in the server
 
 ## Recommendations
-We purposed to do the following but hope some
+We would recommend doing the following:
 * Nextflow automation of MBBU/16S-Accreditation DADA2 pipeline
 * Adding picrust to MBBU/16S-Accreditation DADA2 pipeline for functional analysis
