@@ -114,7 +114,7 @@ nextflow run uct-cbio/16S-rDNA-dada2-pipeline --reads '*_R{1,2}.fastq.gz' --trim
 ### DADA2 MBBU 16S-Accreditation pipeline
 
 * Steps in the pipeline:
-![DADA2 MBBU 16S-Accreditation pipeline](https://github.com/mbbu/Reviewing-16s-Analysis-Workflows/blob/main/MBBU-16S-Accreditation-Dada2-Pipeline-Steps%20(2).png)
+![DADA2 MBBU 16S-Accreditation pipeline](https://github.com/mbbu/Reviewing-16s-Analysis-Workflows/blob/main/New_MBBU_Dada2_pipeline/MBBU-16S-Accreditation-Dada2-Pipeline-Steps.png)
 
 ### QIIME MBBU 16S-Accreditation Pipeline
 
