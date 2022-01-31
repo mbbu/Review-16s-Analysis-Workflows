@@ -181,5 +181,5 @@ The reads kept on being filtered out and seeing that the internship period was c
 
 ## Recommendations
 We would recommend doing the following:
-* Nextflow automation of MBBU/16S-Accreditation DADA2 pipeline
-* Adding picrust to MBBU/16S-Accreditation DADA2 pipeline for functional analysis
+* Nextflow automation of Yosef's pipeline
+* Adding picrust to Yosef's pipeline for functional analysis
