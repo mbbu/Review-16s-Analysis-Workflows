@@ -17,7 +17,7 @@ The gene is used in microbiome analysis. Analysis pipelines have been developed 
   - https://github.com/h3abionet/TADA
   - https://github.com/mbbu/16S_Accreditation
   - https://github.com/h3abionet/h3abionet16S
-  - Yosef's DADA2 pipeline
+  - [Yosef's DADA2 pipeline](https://github.com/mbbu/Reviewing-16s-Analysis-Workflows/blob/main/Yosef-pipeline/dada2-pipeline.R)
 * We used different datasets in running the pieplines.
 
 2. Identifying gaps
