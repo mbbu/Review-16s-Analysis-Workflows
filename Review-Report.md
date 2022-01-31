@@ -134,11 +134,13 @@ This workflow comparison is only for the pipelines that we tested and found to b
        <th>TADA</th>
        <th>MBBU Accreditation Qiime</th>
        <th>MBBU Accreditation dada2</th>
+       <th>Yosef's pipeline</th>
    </tr>
    <tr>
        <td>Runtime</td>
        <td>21 minutes</td>
        <td>46 minutes</td>
+       <td>#</td>
        <td>#</td>
        <td>#</td>
    </tr>
@@ -148,6 +150,7 @@ This workflow comparison is only for the pipelines that we tested and found to b
        <td>Easy, 1 command</td>
        <td>Hard, edit configs</td>
        <td>Hard</td>
+       <td>Easy</td>
    </tr>
    <tr>
        <td>Documentation</td>
@@ -155,6 +158,7 @@ This workflow comparison is only for the pipelines that we tested and found to b
        <td>Well documented</td>
        <td>Lacks setup instructions</td>
        <td>Not well documented</td>
+       <td>Not yet documented</td>
    </tr>
     <tr>
        <td>Gaps</td>
@@ -162,6 +166,7 @@ This workflow comparison is only for the pipelines that we tested and found to b
        <td>Test data, visualization</td>
        <td>Test config, functional analysis</td>
        <td>Not automated</td>
+       <td>Not available on GitHub and Not automated</td>
   
     
 </table>
