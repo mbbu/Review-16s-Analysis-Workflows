@@ -2,7 +2,7 @@ library(dada2)
 library(Cairo)
 
 #loading the fastq files into R
-file_path <- "/home/nelly-wambui/yosef-data"
+file_path <- "data"
 head(list.files(file_path))
 
 #sorting the data
@@ -230,7 +230,7 @@ OTU = otu_table(count_asv_tab, taxa_are_rows = TRUE)
 
 library(dplyr)
 #Reading the sample meta data into R
-sample_metadata <- read.csv("/home/nelly-wambui/yosef-metadata/yosef-metadata.csv", sep = ",", header = T)
+sample_metadata <- read.csv("metadata.csv", sep = ",", header = T)
 sample_metadata <- sample_metadata[,-1]
 sdata <- sample_metadata %>% remove_rownames %>% column_to_rownames(var="SampleID")
 samdata = sample_data(sdata)
@@ -256,7 +256,7 @@ physeq
 ##Create output files
 ## Create BIOM file
 biomformat::write_biom(biomformat::make_biom(data = t(as.matrix(otu_table(physeq)))), 
-                       "/node/cohort4/nelly/16s-rRNA-Project/stinglessbee.biom")
+                       "stinglessbee.biom")
 
 
 #filtering the unwanted sequences
@@ -307,7 +307,7 @@ M_to_blast_dada2_tick_sequences <- dataframe2fas(Microbiota_seq, file = "M_to_bl
 
 #Running blast
 blastn = "/opt/apps/blast/2.10.0+/bin/blastn"
-blast_db = "/home/nelly-wambui/16SMicrobial_v4/16SMicrobial"
+blast_db = "16SMicrobial_v4/16SMicrobial"
 input = "M_to_blast_dada2_tick_sequences.fasta"
 evalue = 1e-6
 format = 6
@@ -345,9 +345,9 @@ blast_out$sacc <- gsub(".[.1-9]$", "", blast_out$sseqid)
 
 library(taxonomizr)
 sacc <- as.vector(blast_out$sacc)
-taxaId<-accessionToTaxa(sacc,"/home/nelly-wambui/16s-rRNA-Project/accessionTaxa.sql",version='base')
+taxaId<-accessionToTaxa(sacc,"accessionTaxa.sql",version='base')
 print(taxaId)
-blast_taxa <- getTaxonomy(taxaId,'/home/nelly-wambui/16s-rRNA-Project/accessionTaxa.sql', rownames = FALSE)
+blast_taxa <- getTaxonomy(taxaId,'accessionTaxa.sql', rownames = FALSE)
 print(blast_taxa)
 
 blast_taxa <- as.data.frame(blast_taxa)
@@ -563,10 +563,10 @@ seq <- merge(seqs, silva_blast_raw, by = "OTU", all = FALSE)
 seq <- seq %>% select(OTU,seqs)
 
 #converting the filtered sequences to fasta format ad writing the fasta file to the working directory
-phylo_sequences <- dataframe2fas(seq, file = "/home/nelly-wambui/phylo_sequences.fasta")
+phylo_sequences <- dataframe2fas(seq, file = "phylo_sequences.fasta")
 
 #Reading the sequences back to R
-phylo_sequences <- readDNAStringSet("/home/nelly-wambui/phylo_sequences.fasta")
+phylo_sequences <- readDNAStringSet("phylo_sequences.fasta")
 names(phylo_sequences)
 
 library(DECIPHER)
